@@ -26,24 +26,26 @@ if (!$email) {
 }
 
 function generateOTP($length = 6) {
-    return rand(100000, 999999); // Generate a 6-digit random OTP
+    return rand(1000, 9999); // Generate a 6-digit random OTP
 }
 
 function sendOTP($email, $otp) {
     $mail = new PHPMailer(true);
     
     try {
+        // public $emailUsername="akinwumisehinde@gmail.com"; //Support Email Address
+		// public $emailPassword="ponbfteqikencbab"; //Suppo
         // SMTP configuration
         $mail->isSMTP();
-        $mail->Host = 'smtp.your-email-provider.com'; // Set your SMTP server
+        $mail->Host = 'smtp.gmail.com'; // Set your SMTP serverCabon@1234
         $mail->SMTPAuth = true;
-        $mail->Username = 'your-email@example.com'; // Your email
-        $mail->Password = getenv('SMTP_PASSWORD'); // Use environment variable for SMTP password
+        $mail->Username = 'akinwumisehinde@gmail.com'; // Your email
+        $mail->Password =    'ponbfteqikencbab';// "Cabon@1234"; // Use environment variable for SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('your-email@example.com', 'Your App Name');
+        $mail->setFrom('akinwumisehinde@gmail.com', 'Cabon Konnect');
         $mail->addAddress($email); // Add a recipient
 
         // Email content
