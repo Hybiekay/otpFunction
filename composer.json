@@ -1,0 +1,6 @@
+{
+    "require": {
+        "appwrite/appwrite": "^12.1",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
